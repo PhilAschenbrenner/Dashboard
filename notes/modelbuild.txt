@@ -1,0 +1,5 @@
+Schlauch Modle
+        + Hersteller
+        + DIN Norm
+        + ID Vergeben
+        + Baujahr
