@@ -2,13 +2,17 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const flash = require("connect-flash");
 const session = require("express-session");
-
+const path = require('path');
 const app = express();
+
+
 app.use(express.static('public'));
 
 //EJS
 app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
+
+
 app.set("view engine", "ejs");
 
 
@@ -38,6 +42,7 @@ app.use(function(req, res, next) {
 //Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
+app.use("/dashboard", require("./routes/dashboard"));
 
 const PORT = process.env.PORT || 80;
 
